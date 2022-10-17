@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="image_description_pokeball">PokeballImage</string>
+    <string name="et_hint_user">User</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="tv_user_greeting">%s you are using version 1 of POKEDEX</string>
+</resources>

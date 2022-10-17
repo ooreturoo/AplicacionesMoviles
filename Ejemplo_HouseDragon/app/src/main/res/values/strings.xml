@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HouseOfTheDragon</string>
     <string name="greeting">Bienvenido sir, con quien tengo el placer de conversar??</string>
+    <string name="greeting_sir">Sir %s, es el momento de que tomes una difícil elección...</string>
 </resources>

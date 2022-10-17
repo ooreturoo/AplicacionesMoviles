@@ -4,12 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ElectionActivity"
-    android:orientation="vertical">
+    tools:context=".CreditsActivity"
+    android:orientation="vertical"
+    >
+
 
     <TextView
-        android:id="@+id/tvGreeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/greeting_sir" />
+        android:layout_weight="20"
+        android:text="@string/tv_user_greeting"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        />
+
 </androidx.appcompat.widget.LinearLayoutCompat>
