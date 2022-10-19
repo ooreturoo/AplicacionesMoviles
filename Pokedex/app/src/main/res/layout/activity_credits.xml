@@ -10,12 +10,36 @@
 
 
     <TextView
+        android:id="@+id/tvGreetingUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="20"
         android:text="@string/tv_user_greeting"
         android:textSize="25sp"
-        android:gravity="center_horizontal"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credits_description"
+        android:layout_weight="40"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_contact"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="20"
+        android:textSize="32sp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"
         />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

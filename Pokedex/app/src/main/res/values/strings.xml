@@ -4,4 +4,7 @@
     <string name="et_hint_user">User</string>
     <string name="btn_login">LOGIN</string>
     <string name="tv_user_greeting">%s you are using version 1 of POKEDEX</string>
+    <string name="credits_description">Within POKEDEX you can find all pokemon information, how their type, attacks, capture zones, etc...</string>
+    <string name="btn_contact">Contact</string>
+    <string name="empty_user">User is empty</string>
 </resources>
