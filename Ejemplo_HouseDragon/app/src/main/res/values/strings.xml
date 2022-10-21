@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">HouseOfTheDragon</string>
     <string name="greeting">Bienvenido sir, con quien tengo el placer de conversar??</string>
-    <string name="greeting_sir">Sir %s, es el momento de que tomes una difícil elección...</string>
+    <string name="greeting_sir">Sir %s, es el momento de que tomes una difícil elección... El rey Viserys ha muerto... Debes elegir a su sucesor como rey de los Ándalos y de los Primeros Hombres, Señor de los Siete Reinos y Protector del Reino. Para ello debes decidir entre apoyar a...</string>
+    <string name="choice_label">Si no tomas una desición no podrás salir de esta encrucijada.</string>
+    <string name="btn_text_choice">Hincar la rodilla</string>
+    <string name="double_choice">Jugar a dos bandas es muy peligroso... Tu cabeza podrá rodar en cualquier momento.</string>
+    <string name="rhaenyra_choice">Has decidido apoyar a una mujer por encima del primogénito varón... Lo pagarás con sangre.</string>
+    <string name="aegon_choice">Has elegido a Aegon contra la voluntad del difunto rey... Arderás por tu elección... Dracarys!</string>
+    <string name="empty_choice">Si no tomas una decisión no podrás salir de esta encrucijada.</string>
+    <string name="btn_exit">Salir</string>
 </resources>
