@@ -67,7 +67,16 @@ class SignUpActivity : AppCompatActivity() {
 
         user = User(userName.toString(),userPass.toString(),email.toString())
 
+
+
         return user
+
+    }
+
+    private fun sendMail(){
+
+        var intent = Intent(Intent.ACTION_SEND)
+        intent.
 
     }
 

@@ -24,7 +24,7 @@ class WelcomeActivity : AppCompatActivity() {
 
         binding.logInButton.setOnClickListener {
 
-            val intent = Intent(this, MainWindowActivity::class.java)
+            val intent = Intent(this, LogInActivity::class.java)
             startActivity(intent)
 
         }

@@ -16,19 +16,36 @@ class ElectionActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.tvGreeting)
         textView.text = getString(R.string.greeting_sir, name)
         val btnKneelDown = findViewById<Button>(R.id.btnChoice)
-        btnKneelDown.setOnClickListener {
-
-            val intent = Intent(this,FinalActivity::class.java)
-            intent.putExtra("Choice", targarianChoice())
-            startActivity(intent)
-
-        }
-    }
-
-    private fun targarianChoice() : CharSequence{
 
         val rhaenyra = findViewById<CheckBox>(R.id.cBoxRhaenyra)
         val aegon = findViewById<CheckBox>(R.id.cBoxAegon)
+        val decision = findViewById<TextView>(R.id.tvDecision)
+
+        btnKneelDown.setOnClickListener {
+
+            val intent = Intent(this,FinalActivity::class.java)
+            intent.putExtra("Choice", targarianChoice(rhaenyra,aegon))
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
+            startActivity(intent)
+
+        }
+
+        rhaenyra.setOnClickListener{
+
+            decision.text = targarianChoice(rhaenyra, aegon)
+
+        }
+
+        aegon.setOnClickListener {
+
+            decision.text = targarianChoice(rhaenyra, aegon)
+
+        }
+
+    }
+
+    private fun targarianChoice(rhaenyra : CheckBox, aegon : CheckBox) : CharSequence{
+
         val text : CharSequence
 
         if (rhaenyra.isChecked && aegon.isChecked){

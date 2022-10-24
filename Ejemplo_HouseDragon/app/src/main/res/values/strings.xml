@@ -9,4 +9,6 @@
     <string name="aegon_choice">Has elegido a Aegon contra la voluntad del difunto rey... Arderás por tu elección... Dracarys!</string>
     <string name="empty_choice">Si no tomas una decisión no podrás salir de esta encrucijada.</string>
     <string name="btn_exit">Salir</string>
+    <string name="undecided_final">Si no eres capaz de decidir, eres una carga para el reino.</string>
+    <string name="empty_field">El campo está vacío</string>
 </resources>

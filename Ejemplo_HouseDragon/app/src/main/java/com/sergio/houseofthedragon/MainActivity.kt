@@ -28,13 +28,18 @@ class MainActivity : AppCompatActivity() {
 
             val intent = Intent(this, ElectionActivity::class.java)
             intent.putExtra("Name",name.text)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
             startActivity(intent)
+            finish()
 
         }else{
 
-            Toast.makeText(this,"El campo está vacío", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,getString(R.string.empty_field), Toast.LENGTH_SHORT).show()
 
         }
 
     }
+
+
+
 }

@@ -24,18 +24,7 @@ class LogInActivity : AppCompatActivity() {
 
             try {
 
-                when(checkUserData()){
-
-                    -1 -> Toast.makeText(this,"No hay ningún usuario con ese nombre", Toast.LENGTH_SHORT).show()
-                    0 -> Toast.makeText(this,"Contraseña equivocada", Toast.LENGTH_SHORT).show()
-                    1 -> {
-
-                        val intent = Intent(this, MainWindowActivity::class.java)
-                        startActivity(intent)
-
-                    }
-
-                }
+                checkUserData()
 
             }catch ( e : IncorrectDataException){
 
@@ -47,7 +36,7 @@ class LogInActivity : AppCompatActivity() {
 
     }
 
-    private fun checkUserData() : Int{
+    private fun checkUserData() {
 
         val userName = binding.logInUser.text
         val pass = binding.logInPass.text
@@ -56,27 +45,19 @@ class LogInActivity : AppCompatActivity() {
 
             throw IncorrectDataException("Debes rellenar los campos.")
 
-        var userFound = -1
 
-        for (user in UserDataBase.userList){
+        when(UserDataBase.checkLoginUser(userName.toString(), pass.toString())){
 
-            if (user.name.equals(userName)){
+            -1 -> Toast.makeText(this,"No hay ningún usuario con ese nombre", Toast.LENGTH_SHORT).show()
+            0 -> Toast.makeText(this,"Contraseña equivocada", Toast.LENGTH_SHORT).show()
+            1 -> {
 
-                userFound = 0
-
-                if (user.password.equals(pass)){
-
-                    userFound = 1
-
-                }
-
-                break
+                val intent = Intent(this, MainWindowActivity::class.java)
+                startActivity(intent)
 
             }
 
         }
-
-        return userFound
 
     }
 

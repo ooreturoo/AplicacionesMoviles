@@ -11,15 +11,34 @@ class FinalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_final)
 
-        findViewById<TextView>(R.id.tvFinal).text = intent.getStringExtra("Choice")
+        findViewById<TextView>(R.id.tvFinal).text = changeText(intent.getStringExtra("Choice")!!)
         findViewById<Button>(R.id.btnExit).setOnClickListener {
 
-            intent = Intent(Intent.ACTION_MAIN)
-            intent.addCategory(Intent.CATEGORY_HOME)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(intent)
+            finish()
 
         }
+
+    }
+
+    private fun changeText(text: String): String {
+
+        val newText : String
+
+        if(text == getString(R.string.double_choice) || text == getString(R.string.empty_choice)){
+
+            newText = getString(R.string.undecided_final)
+
+        }else if(text == getString(R.string.rhaenyra_choice)){
+
+            newText = "Has elegido a Rhaenira."
+
+        }else{
+
+            newText = "Has elegido a Aegon."
+
+        }
+
+        return newText
 
     }
 }
