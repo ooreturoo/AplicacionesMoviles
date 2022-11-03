@@ -8,7 +8,12 @@
     <string name="rhaenyra_choice">Has decidido apoyar a una mujer por encima del primogénito varón... Lo pagarás con sangre.</string>
     <string name="aegon_choice">Has elegido a Aegon contra la voluntad del difunto rey... Arderás por tu elección... Dracarys!</string>
     <string name="empty_choice">Si no tomas una decisión no podrás salir de esta encrucijada.</string>
-    <string name="btn_exit">Salir</string>
+    <string name="btn_exit">Luchar</string>
+    <string name="both_final">Has elegido a ambos</string>
+    <string name="rhaenyra_final">Has elegido a Rhaenira</string>
+    <string name="aegon_final">Has elegido a Aegon</string>
     <string name="undecided_final">Si no eres capaz de decidir, eres una carga para el reino.</string>
     <string name="empty_field">El campo está vacío</string>
+    <string name="switch_text_disable">Preparando la lucha</string>
+    <string name="switch_text_enable">Vamos a luchar!</string>
 </resources>

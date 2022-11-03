@@ -3,6 +3,7 @@ package com.sergio.houseofthedragon
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.AlarmClock
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
@@ -11,6 +12,18 @@ class ElectionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_election)
+
+        val intent = Intent(AlarmClock.ACTION_SET_TIMER).apply {
+            putExtra(AlarmClock.EXTRA_LENGTH,10)
+            putExtra(AlarmClock.EXTRA_MESSAGE,"Realiza una eleccion.")
+            putExtra(AlarmClock.EXTRA_SKIP_UI, true)
+        }
+
+        try {
+            startActivity(intent)
+        }catch (e : Exception) {
+
+        }
 
         val name = intent.extras!!.get("Name")
         val textView = findViewById<TextView>(R.id.tvGreeting)
@@ -32,39 +45,57 @@ class ElectionActivity : AppCompatActivity() {
 
         rhaenyra.setOnClickListener{
 
-            decision.text = targarianChoice(rhaenyra, aegon)
+            decision.text = textChoice(targarianChoice(rhaenyra, aegon))
 
         }
 
         aegon.setOnClickListener {
 
-            decision.text = targarianChoice(rhaenyra, aegon)
+            decision.text = textChoice(targarianChoice(rhaenyra, aegon))
 
         }
+
+
 
     }
 
-    private fun targarianChoice(rhaenyra : CheckBox, aegon : CheckBox) : CharSequence{
+    private fun targarianChoice(rhaenyra : CheckBox, aegon : CheckBox) : Int{
 
-        val text : CharSequence
+        val election =
 
         if (rhaenyra.isChecked && aegon.isChecked){
 
-            text = getString(R.string.double_choice)
+            2
 
         }else if (rhaenyra.isChecked){
 
-            text = getString(R.string.rhaenyra_choice)
+           1
 
         }else if (aegon.isChecked){
 
-            text = getString(R.string.aegon_choice)
+           -1
 
         }else{
 
-            text = getString(R.string.empty_choice)
+            0
 
         }
+
+        return election
+
+    }
+
+    private fun textChoice(election : Int) : CharSequence {
+
+        val text =
+
+            when(election){
+                1 -> getString(R.string.rhaenyra_choice)
+                -1 -> getString(R.string.aegon_choice)
+                2 -> getString(R.string.double_choice)
+                else -> getString(R.string.empty_choice)
+
+            }
 
         return text
 
