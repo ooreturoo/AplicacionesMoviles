@@ -31,6 +31,21 @@ class MainActivity : AppCompatActivity() {
         binding.boxFiveText.setOnClickListener{
             makeColored(it)
         }
+        binding.boxSixText.setOnClickListener{
+            makeColored(it)
+        }
+        binding.boxSevenText.setOnClickListener{
+            makeColored(it)
+        }
+        binding.boxEightText.setOnClickListener{
+            makeColored(it)
+        }
+        binding.boxNineText.setOnClickListener{
+            makeColored(it)
+        }
+        binding.boxTenText.setOnClickListener{
+            makeColored(it)
+        }
         binding.root.setOnClickListener{
             makeColored(it)
         }
@@ -56,7 +71,7 @@ class MainActivity : AppCompatActivity() {
         if(view.id == R.id.contraint_layout){
             view.setBackgroundColor(Color.LTGRAY)
         }else {
-            view.setBackgroundColor(colores[Random.nextInt(0,colores.size)])
+            view.setBackgroundColor(Color.rgb(Random.nextInt(0,255),Random.nextInt(0,255),Random.nextInt(0,255)))
         }
 
 

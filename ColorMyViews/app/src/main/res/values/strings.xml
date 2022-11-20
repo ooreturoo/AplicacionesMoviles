@@ -10,5 +10,7 @@
     <string name="box_eight">Caja Ocho</string>
     <string name="box_nine">Caja Nueve</string>
     <string name="box_ten">Caja Diez</string>
+    <string name="how_play">Como Jugar:</string>
+    <string name="how_desc">Pulsa en el fondo y en las diferentes cajas para dibujarlas. </string>
 
 </resources>
