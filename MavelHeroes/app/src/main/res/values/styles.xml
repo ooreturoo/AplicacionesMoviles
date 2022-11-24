@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="title_hero_text">
+        <item name="android:fontFamily">@font/marvel_bold</item>
+        <item name="android:textColor">#D32020</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="important_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+</resources>

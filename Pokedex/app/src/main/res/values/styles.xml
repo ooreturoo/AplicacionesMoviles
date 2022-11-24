@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="btn_style">
+        <item name="android:fontFamily">@font/press_start_2p</item>
+        <item name="android:paddingTop">@dimen/btn_top_padding</item>
+        <item name="android:textSize">38sp</item>
+    </style>
+</resources>
