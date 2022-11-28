@@ -4,4 +4,8 @@
     <dimen name="horizontal_margin">16dp</dimen>
     <dimen name="btn_top_padding">20dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="pokemon_item_image_size">50dp</dimen>
+    <dimen name="image_horizontal_margin">32dp</dimen>
+    <dimen name="content_horizontal_margin">16dp</dimen>
+    <dimen name="content_vertical_margin">16dp</dimen>
 </resources>

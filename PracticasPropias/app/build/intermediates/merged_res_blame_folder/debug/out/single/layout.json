@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.practicaspropias.app-mergeDebugResources-4:/layout/activity_main_window.xml",
+        "source": "com.example.practicaspropias.app-main-7:/layout/activity_main_window.xml"
+    },
+    {
+        "merged": "com.example.practicaspropias.app-mergeDebugResources-4:/layout/activity_sign_up.xml",
+        "source": "com.example.practicaspropias.app-main-7:/layout/activity_sign_up.xml"
+    },
+    {
+        "merged": "com.example.practicaspropias.app-mergeDebugResources-4:/layout/activity_log_in.xml",
+        "source": "com.example.practicaspropias.app-main-7:/layout/activity_log_in.xml"
+    },
+    {
+        "merged": "com.example.practicaspropias.app-mergeDebugResources-4:/layout/activity_welcome.xml",
+        "source": "com.example.practicaspropias.app-main-7:/layout/activity_welcome.xml"
+    }
+]

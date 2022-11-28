@@ -1,10 +1,12 @@
 package com.sergio.pokedex.lists.item
 
+import android.media.Image
+
 data class PokemonItemPokedex(
 
+    //val image : Image,
     val pokedexIndex : Int,
     val name : String,
-    val type : String,
-    val totalFroms : Int,
+    val types : List<String>,
 
 )
