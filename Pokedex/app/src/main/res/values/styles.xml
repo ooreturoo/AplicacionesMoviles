@@ -2,9 +2,8 @@
 <resources>
 
     <style name="btn_style">
-        <item name="android:fontFamily">@font/press_start_2p</item>
-        <item name="android:paddingTop">@dimen/btn_top_padding</item>
-        <item name="android:textSize">38sp</item>
+        <item name="android:fontFamily">@font/vt323</item>
+        <item name="android:textSize">42sp</item>
     </style>
 
     <style name="text_style">

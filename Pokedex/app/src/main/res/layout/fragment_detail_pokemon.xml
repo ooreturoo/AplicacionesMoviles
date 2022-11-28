@@ -2,59 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/detailRoot"
+    android:id="@+id/constraintRoot"
     android:layout_width="match_parent"
     android:layout_height="150dp"
     tools:context=".lists.DetailPokemonFragment">
 
-    <ImageView
-        android:id="@+id/pokemonImage"
-        android:layout_width="@dimen/pokemon_item_image_size"
-        android:layout_height="@dimen/pokemon_item_image_size"
-        app:srcCompat="@drawable/pixel_pokeball"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="40dp" />
-
-    <TextView
-        android:id="@+id/tvPokemonHeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/height_text"
-        tools:layout_editor_absoluteX="210dp"
-        tools:layout_editor_absoluteY="115dp" />
-
-    <TextView
-        android:id="@+id/tvPokemonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="66dp" />
-
-    <TextView
-        android:id="@+id/tvPokemonWeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/weight_text"
-        tools:layout_editor_absoluteX="339dp"
-        tools:layout_editor_absoluteY="115dp" />
-
-    <TextView
-        android:id="@+id/tvPokemonTypes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="66dp" />
-
-    <TextView
-        android:id="@+id/tvPokedexPokemonNum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/horizontal_margin"
-        android:layout_marginTop="@dimen/vertical_margin"
-        android:text="@string/pokedex_number_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

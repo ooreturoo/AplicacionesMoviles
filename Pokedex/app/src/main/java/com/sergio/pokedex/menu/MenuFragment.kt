@@ -24,21 +24,33 @@ class MenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentMenuBinding.inflate(inflater,container,false)
-        // Inflate the layout for this fragment
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
 
         binding.btnLogOut.setOnClickListener{
 
-           view.findNavController().navigate(R.id.action_menuFragment_to_loginFragment)
+            it.findNavController().navigate(R.id.action_menuFragment_to_loginFragment)
+
+        }
+        binding.btnPokedex.setOnClickListener {
+
+            it.findNavController().navigate(R.id.action_menuFragment_to_pokemonListFragment)
+
+        }
+        binding.btnCredits.setOnClickListener {
+
+            it.findNavController().navigate(R.id.action_menuFragment_to_creditsFragment)
+
+        }
+        binding.btnFavourites.setOnClickListener {
+
+            it.findNavController().navigate(R.id.action_menuFragment_to_pokemonFavListFragment)
 
         }
 
 
+        // Inflate the layout for this fragment
+        return binding.root
     }
+
+
 
 }
