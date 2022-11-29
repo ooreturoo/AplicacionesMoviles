@@ -4,8 +4,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintRoot"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
+    android:background="#63ECE7"
     tools:context=".lists.DetailPokemonFragment">
 
+
+    <ImageView
+        android:id="@+id/ivDetPokemon"
+        android:layout_width="@dimen/pokemon_image_size"
+        android:layout_height="@dimen/pokemon_image_size"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:background="@drawable/border_image"
+        android:elevation="2dp"
+        android:src="@drawable/charmander"
+        android:translationZ="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivDetFav"
+        android:layout_width="@dimen/details_star_size"
+        android:layout_height="@dimen/details_star_size"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:src="@drawable/ic_full_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivDetCaught"
+        android:layout_width="@dimen/caught_image_size"
+        android:layout_height="@dimen/caught_image_size"
+        android:layout_marginEnd="@dimen/types_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDetPokemonName"
+        app:layout_constraintEnd_toStartOf="@+id/tvDetPokemonName"
+        app:layout_constraintTop_toTopOf="@+id/tvDetPokemonName"
+        tools:srcCompat="@drawable/pixel_pokeball" />
+
+    <TextView
+        android:id="@+id/tvDetPokemonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/header_details_vertical_margin"
+        app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
+        app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
+        app:layout_constraintTop_toBottomOf="@+id/ivDetPokemon"
+        tools:text="Charmander" />
+
+    <TextView
+        android:id="@+id/tvDetPokedexNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvDetPokemonName"
+        app:layout_constraintStart_toStartOf="@+id/tvDetPokemonName"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetPokemonName"
+        tools:text="Nº003" />
+
+    <LinearLayout
+        android:id="@+id/rootTypesImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/header_details_vertical_margin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
+        app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetPokedexNum">
+
+        <ImageView
+            android:id="@+id/ivDetType1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/types_margin"
+            android:layout_weight="1"
+            android:src="@drawable/tipo_acero" />
+
+        <ImageView
+            android:id="@+id/ivDetType2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/types_margin"
+            android:layout_weight="1"
+            android:src="@drawable/tipo_acero" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDetNature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/header_details_vertical_margin"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
+        app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
+        app:layout_constraintTop_toBottomOf="@+id/rootTypesImages"
+        tools:text="Naturaleza"/>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/vertical_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
+        app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
+        tools:text="Popabilidad captura : 50%"/>
+
+    <TextView
+        android:id="@+id/tvDetEvolutionFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/details_vertical_margin"
+        android:layout_marginBottom="@dimen/details_vertical_margin"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/tvDetEvolutionTo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetNature"
+        tools:text="Evoluciona de Charmander"/>
+
+    <TextView
+        android:id="@+id/tvDetEvolutionTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_vertical_margin"
+        android:layout_marginEnd="@dimen/content_horizontal_margin"
+        android:layout_marginBottom="@dimen/details_vertical_margin"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvDetEvolutionFrom"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetNature"
+        tools:text="Evoluciona a Charmilion"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

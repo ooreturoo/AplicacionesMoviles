@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_details_vertical_margin">8dp</dimen>
+    <dimen name="pokemon_image_size">150dp</dimen>
+    <dimen name="details_vertical_margin">24dp</dimen>
+    <dimen name="types_margin">4dp</dimen>
+    <dimen name="caught_image_size">15dp</dimen>
+    <dimen name="details_star_size">30dp</dimen>
+</resources>
