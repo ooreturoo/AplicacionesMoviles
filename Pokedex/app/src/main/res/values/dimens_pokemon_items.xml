@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pokemon_item_content_horizontal_margin">8dp</dimen>
+    <dimen name="pokemon_item_content_vertical_margin">8dp</dimen>
+    <dimen name="pokemon_item_star_size">35dp</dimen>
+    <dimen name="pokemon_item_pokemon_size">90dp</dimen>
+    <dimen name="pokemon_item_caught_size">30dp</dimen>
+    <dimen name="pokemon_item_types_horizontal_margin">4dp</dimen>
+    <dimen name="pokemon_item_type_size">37dp</dimen>
+    <dimen name="pokemon_item_card_vertical_margin">8dp</dimen>
+    <dimen name="pokemon_item_card_horizontal_margin">16dp</dimen>
+</resources>

@@ -92,12 +92,11 @@
         android:id="@+id/tvDetNature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/header_details_vertical_margin"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
         app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
         app:layout_constraintTop_toBottomOf="@+id/rootTypesImages"
-        tools:text="Naturaleza"/>
+        tools:text="Naturaleza" />
 
     <TextView
         android:id="@+id/textView7"
