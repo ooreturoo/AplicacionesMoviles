@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.sergio.pokedex.R
 import com.sergio.pokedex.databinding.FragmentDetailPokemonBinding
 import com.sergio.pokedex.databinding.FragmentPokemonListBinding
 import com.sergio.pokedex.lists.pokedex.adapter.PokemonListAdapter
@@ -50,7 +52,7 @@ class PokemonListFragment : Fragment() {
     }
 
     private fun onClickElement(pokemon : PokemonItemPokedex){
-        val bindingDetails = FragmentDetailPokemonBinding.inflate()
+        findNavController().navigate(R.id.action_pokemonListFragment_to_detailPokemonFragment)
 
     }
 

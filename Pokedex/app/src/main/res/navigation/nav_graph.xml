@@ -41,10 +41,19 @@
         android:id="@+id/pokemonListFragment"
         android:name="com.sergio.pokedex.lists.pokedex.PokemonListFragment"
         android:label="fragment_pokemon_list"
-        tools:layout="@layout/fragment_pokemon_list" />
+        tools:layout="@layout/fragment_pokemon_list" >
+        <action
+            android:id="@+id/action_pokemonListFragment_to_detailPokemonFragment"
+            app:destination="@id/detailPokemonFragment" />
+    </fragment>
     <fragment
         android:id="@+id/pokemonFavListFragment"
         android:name="com.sergio.pokedex.lists.pokedex.PokemonFavListFragment"
         android:label="fragment_pokemon_fav_list"
         tools:layout="@layout/fragment_pokemon_fav_list" />
+    <fragment
+        android:id="@+id/detailPokemonFragment"
+        android:name="com.sergio.pokedex.lists.DetailPokemonFragment"
+        android:label="fragment_detail_pokemon"
+        tools:layout="@layout/fragment_detail_pokemon" />
 </navigation>
