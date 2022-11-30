@@ -6,11 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sergio.pokedex.R
 import com.sergio.pokedex.databinding.FragmentPokemonFavListBinding
-import com.sergio.pokedex.databinding.FragmentPokemonListBinding
 import com.sergio.pokedex.lists.pokedex.adapter.PokemonFavListAdapter
-import com.sergio.pokedex.lists.pokedex.adapter.PokemonListAdapter
 import com.sergio.pokedex.lists.pokedex.provider.PokemonProvider
 
 class PokemonFavListFragment : Fragment() {

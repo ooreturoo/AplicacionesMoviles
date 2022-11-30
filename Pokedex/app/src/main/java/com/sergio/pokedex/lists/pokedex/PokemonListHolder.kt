@@ -13,8 +13,8 @@ class PokemonListHolder(view : View) : RecyclerView.ViewHolder(view)  {
     private val pokemonImage = binding.pokemonImage
     private val tvPokedexPokemonNum = binding.tvPokedexPokemonNum
     private val tvPokemonName = binding.tvPokemonName
-    private val tvImageType1 = binding.imageType1
-    private val tvImageType2 = binding.imageType2
+    private val tvImageType1 = binding.ivItemType1
+    private val tvImageType2 = binding.ivItemType2
     private val favImageView = binding.favImageView
 
 
@@ -27,7 +27,7 @@ class PokemonListHolder(view : View) : RecyclerView.ViewHolder(view)  {
         favImageView.setOnClickListener{
 
             pokemon.favourite = !pokemon.favourite
-            onClickStar(absoluteAdapterPosition)
+            onClickStar(adapterPosition)
 
         }
 

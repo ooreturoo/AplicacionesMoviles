@@ -4,15 +4,17 @@
 <!--    <color name="primaryLightColor">#ff6f60</color>-->
 <!--    <color name="primaryDarkColor">#ab000d</color>-->
 
-    <color name="primaryColor">#424242</color>
+    <color name="primaryColor">#ffffff</color>
     <color name="primaryLightColor">#6d6d6d</color>
-    <color name="primaryDarkColor">#1b1b1b</color>
-    <color name="primaryTextColor">#000000</color>
+    <color name="primaryDarkColor">#282828</color>
+
 
     <color name="secondaryColor">#fafafa</color>
-    <color name="secondaryLightColor">#ffffff</color>
-    <color name="secondaryDarkColor">#c7c7c7</color>
+    <color name="secondaryLightColor">#ffff72</color>
+    <color name="secondaryDarkColor">#ffeb3b</color>
 
+    <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#ffffff</color>
+
     <color name="backgroundColor">#2196f3</color>
 </resources>

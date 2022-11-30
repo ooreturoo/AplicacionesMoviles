@@ -10,9 +10,10 @@
     android:layout_marginTop="@dimen/pokemon_item_card_vertical_margin"
     android:layout_marginEnd="@dimen/pokemon_item_card_horizontal_margin"
     android:layout_marginBottom="@dimen/pokemon_item_card_vertical_margin"
-    app:cardElevation="5dp"
-    card_view:cardCornerRadius="4dp"
-    app:cardBackgroundColor="#EA5E5E">
+    android:visibility="visible"
+    tools:cardBackgroundColor="#EA5E5E"
+    tools:cardElevation="5dp"
+    card_view:cardCornerRadius="4dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,17 +34,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivPokemonCaught"
             app:layout_constraintTop_toBottomOf="@+id/tvPokedexPokemonNum"
-            app:srcCompat="@drawable/charmander" />
+            tools:srcCompat="@drawable/charmander" />
 
         <TextView
             android:id="@+id/tvPokemonName"
+            style="@style/attributes_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/pokemon_item_content_horizontal_margin"
-            android:fontFamily="@font/press_start_2p"
-            android:textColor="@color/primaryTextColor"
-            android:textSize="12sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/pokemonImage"
             app:layout_constraintStart_toEndOf="@+id/pokemonImage"
             app:layout_constraintTop_toTopOf="@+id/pokemonImage"
@@ -53,67 +51,62 @@
             android:id="@+id/tvPokedexPokemonNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/horizontal_margin"
-            android:layout_marginTop="@dimen/vertical_margin"
+            android:layout_marginStart="@dimen/pokemon_item_content_horizontal_margin"
             android:fontFamily="@font/press_start_2p"
             android:text="@string/pokedex_number_text"
             android:textColor="@color/primaryTextColor"
             android:textSize="14sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/favImageView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageType1"
-            android:layout_width="@dimen/pokemon_item_type_size"
-            android:layout_height="@dimen/pokemon_item_type_size"
-            android:layout_marginStart="@dimen/pokemon_item_content_horizontal_margin"
-            android:layout_marginEnd="@dimen/pokemon_item_types_horizontal_margin"
-            android:layout_weight="1"
-            android:src="@drawable/tipo_acero"
-            app:layout_constraintBottom_toBottomOf="@+id/tvPokemonName"
-            app:layout_constraintEnd_toStartOf="@+id/imageType2"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toEndOf="@+id/tvPokemonName"
-            app:layout_constraintTop_toTopOf="@+id/tvPokemonName"
-            app:layout_constraintVertical_bias="0.666"
-            app:srcCompat="@drawable/icon_fire_type" />
-
-        <ImageView
-            android:id="@+id/imageType2"
-            android:layout_width="@dimen/pokemon_item_type_size"
-            android:layout_height="@dimen/pokemon_item_type_size"
-            android:layout_marginStart="@dimen/pokemon_item_types_horizontal_margin"
-            android:layout_marginEnd="@dimen/horizontal_margin"
-            android:layout_weight="1"
-            app:layout_constraintBottom_toBottomOf="@+id/imageType1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageType1"
-            app:layout_constraintTop_toTopOf="@+id/imageType1"
-            app:srcCompat="@drawable/icon_fire_type" />
+            app:layout_constraintTop_toTopOf="@+id/favImageView" />
 
         <ImageView
             android:id="@+id/ivPokemonCaught"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_width="@dimen/pokemon_item_caught_size"
+            android:layout_height="@dimen/pokemon_item_caught_size"
+            android:layout_marginStart="@dimen/pokemon_item_content_horizontal_margin"
             app:layout_constraintBottom_toBottomOf="@+id/pokemonImage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/pokemonImage"
             app:layout_constraintVertical_bias="0.5"
-            app:srcCompat="@drawable/pixel_pokeball" />
+            tools:srcCompat="@drawable/pixel_pokeball" />
 
         <ImageView
             android:id="@+id/favImageView"
             android:layout_width="@dimen/pokemon_item_star_size"
             android:layout_height="@dimen/pokemon_item_star_size"
-            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/pokemon_item_content_vertical_margin"
+            android:layout_marginEnd="@dimen/pokemon_item_content_horizontal_margin"
             android:src="@android:drawable/btn_star"
-            app:layout_constraintBottom_toBottomOf="@+id/tvPokedexPokemonNum"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvPokedexPokemonNum" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/pokemon_item_content_horizontal_margin"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPokemonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvPokemonName">
+
+            <ImageView
+                android:id="@+id/ivItemType1"
+                android:layout_width="@dimen/pokemon_item_type_size"
+                android:layout_height="@dimen/pokemon_item_type_size"
+                android:layout_weight="1"
+                android:visibility="visible"
+                tools:srcCompat="@drawable/icon_fire_type" />
+
+            <ImageView
+                android:id="@+id/ivItemType2"
+                android:layout_width="@dimen/pokemon_item_type_size"
+                android:layout_height="@dimen/pokemon_item_type_size"
+                android:layout_weight="1"
+                android:visibility="gone"
+                tools:srcCompat="@drawable/icon_fire_type" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
