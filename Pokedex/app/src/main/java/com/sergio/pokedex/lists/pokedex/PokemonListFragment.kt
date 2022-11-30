@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.sergio.pokedex.databinding.FragmentDetailPokemonBinding
 import com.sergio.pokedex.databinding.FragmentPokemonListBinding
 import com.sergio.pokedex.lists.pokedex.adapter.PokemonListAdapter
+import com.sergio.pokedex.lists.pokedex.item.PokemonItemPokedex
 import com.sergio.pokedex.lists.pokedex.provider.PokemonProvider
 
 
@@ -21,7 +23,7 @@ class PokemonListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPokemonListBinding.inflate(inflater, container,false)
-        adapter = PokemonListAdapter(PokemonProvider.pokemonList, onClickStar = { pos -> onClickStar(pos)})
+        adapter = PokemonListAdapter(PokemonProvider.pokemonList, onClickStar = { pos -> onClickStar(pos)}, onClickElement = {pokemon -> onClickElement(pokemon)})
         binding.recyclerPokedex.adapter = adapter
         binding.recyclerPokedex.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
@@ -44,6 +46,11 @@ class PokemonListFragment : Fragment() {
         }
 
         adapter.notifyItemChanged(pos)
+
+    }
+
+    private fun onClickElement(pokemon : PokemonItemPokedex){
+        val bindingDetails = FragmentDetailPokemonBinding.inflate()
 
     }
 

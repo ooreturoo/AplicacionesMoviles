@@ -1,10 +1,13 @@
 package com.sergio.pokedex.lists.pokedex
 
 import android.view.View
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.RecyclerView
 import com.sergio.pokedex.R
 import com.sergio.pokedex.databinding.FragmentPokemonItemBinding
 import com.sergio.pokedex.lists.pokedex.item.PokemonItemPokedex
+import com.sergio.pokedex.menu.MenuFragment
 
 class PokemonListHolder(view : View) : RecyclerView.ViewHolder(view)  {
 
@@ -19,7 +22,7 @@ class PokemonListHolder(view : View) : RecyclerView.ViewHolder(view)  {
 
 
 
-    fun bind(pokemon : PokemonItemPokedex, onClickStar : (Int) -> Unit){
+    fun bind(pokemon : PokemonItemPokedex, onClickStar : (Int) -> Unit, onClickElement : (PokemonItemPokedex) -> Unit,){
 
         tvPokedexPokemonNum.text = tvPokedexPokemonNum.resources.getString(R.string.pokedex_number_text,pokemon.pokedexIndex)
         tvPokemonName.text = pokemon.name
@@ -27,13 +30,13 @@ class PokemonListHolder(view : View) : RecyclerView.ViewHolder(view)  {
         favImageView.setOnClickListener{
 
             pokemon.favourite = !pokemon.favourite
-            onClickStar(adapterPosition)
+            onClickStar(bindingAdapterPosition)
 
         }
 
         binding.root.setOnClickListener{
 
-
+            onClickElement(pokemon)
 
         }
 

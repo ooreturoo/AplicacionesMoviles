@@ -5,8 +5,8 @@
 <!--    <color name="primaryDarkColor">#ab000d</color>-->
 
     <color name="primaryColor">#ffffff</color>
-    <color name="primaryLightColor">#6d6d6d</color>
-    <color name="primaryDarkColor">#282828</color>
+    <color name="primaryLightColor">#2c2c2c</color>
+    <color name="primaryDarkColor">#000000</color>
 
 
     <color name="secondaryColor">#fafafa</color>
