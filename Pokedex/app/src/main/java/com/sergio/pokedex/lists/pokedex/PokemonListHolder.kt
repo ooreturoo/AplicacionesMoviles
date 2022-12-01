@@ -1,13 +1,10 @@
 package com.sergio.pokedex.lists.pokedex
 
 import android.view.View
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.RecyclerView
 import com.sergio.pokedex.R
 import com.sergio.pokedex.databinding.FragmentPokemonItemBinding
 import com.sergio.pokedex.lists.pokedex.item.PokemonItemPokedex
-import com.sergio.pokedex.menu.MenuFragment
 
 class PokemonListHolder(view : View) : RecyclerView.ViewHolder(view)  {
 

@@ -50,7 +50,11 @@
         android:id="@+id/pokemonFavListFragment"
         android:name="com.sergio.pokedex.lists.pokedex.PokemonFavListFragment"
         android:label="fragment_pokemon_fav_list"
-        tools:layout="@layout/fragment_pokemon_fav_list" />
+        tools:layout="@layout/fragment_pokemon_fav_list" >
+        <action
+            android:id="@+id/action_pokemonFavListFragment_to_detailPokemonFragment"
+            app:destination="@id/detailPokemonFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailPokemonFragment"
         android:name="com.sergio.pokedex.lists.DetailPokemonFragment"

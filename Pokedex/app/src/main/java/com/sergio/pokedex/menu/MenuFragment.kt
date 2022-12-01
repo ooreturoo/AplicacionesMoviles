@@ -14,10 +14,7 @@ class MenuFragment : Fragment() {
 
     private lateinit var binding : FragmentMenuBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,9 +43,8 @@ class MenuFragment : Fragment() {
 
         }
 
-
-        // Inflate the layout for this fragment
         return binding.root
+
     }
 
 

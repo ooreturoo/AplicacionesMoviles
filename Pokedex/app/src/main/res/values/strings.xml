@@ -17,4 +17,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="pokedex_title">Pokedex</string>
     <string name="details_evolutions_text">Evolutions</string>
+    <string name="btn_user_info_text">User Info</string>
 </resources>

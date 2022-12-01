@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintRoot"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#63ECE7"
+    android:layout_height="match_parent"
+    android:background="@color/primaryLightColor"
     tools:context=".lists.DetailPokemonFragment">
 
 
@@ -27,12 +27,13 @@
         android:id="@+id/ivDetPokemon"
         android:layout_width="@dimen/details_pokemon_image_size"
         android:layout_height="@dimen/details_pokemon_image_size"
-        android:layout_marginTop="@dimen/vertical_margin"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:background="@drawable/border_image"
-        tools:srcCompat="@drawable/charmander"/>
+        tools:srcCompat="@drawable/charmander" />
 
     <ImageView
         android:id="@+id/ivDetFav"
@@ -42,7 +43,7 @@
         android:layout_marginEnd="@dimen/horizontal_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_full_star"/>
+        tools:src="@drawable/ic_full_star" />
 
     <ImageView
         android:id="@+id/ivDetCaught"
@@ -59,7 +60,7 @@
         style="@style/attributes_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/header_details_vertical_margin"
+        android:layout_marginTop="@dimen/details_header_vertical_margin"
         app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
         app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
         app:layout_constraintTop_toBottomOf="@+id/ivDetPokemon"
@@ -79,7 +80,7 @@
         android:id="@+id/rootTypesImages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/header_details_vertical_margin"
+        android:layout_marginTop="@dimen/details_header_vertical_margin"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
         app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
@@ -133,7 +134,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/horizontal_margin"
-        android:layout_marginTop="@dimen/details_vertical_margin"
         android:layout_marginBottom="@dimen/vertical_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvDetEvolutionTo"
@@ -146,7 +146,6 @@
         android:id="@+id/tvDetEvolutionTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/details_vertical_margin"
         android:layout_marginEnd="@dimen/horizontal_margin"
         android:layout_marginBottom="@dimen/vertical_margin"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -154,7 +153,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tvDetEvolutionFrom"
         app:layout_constraintTop_toBottomOf="@+id/tvEvolutions"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.5"
         tools:text="Evoluciona a Charmilion" />
 
     <TextView
