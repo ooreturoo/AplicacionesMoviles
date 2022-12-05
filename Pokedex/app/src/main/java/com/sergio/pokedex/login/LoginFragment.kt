@@ -45,7 +45,7 @@ class LoginFragment : Fragment() {
 
         binding.btnLogin.setOnClickListener{
 
-            view.findNavController().navigate(R.id.action_loginFragment_to_menuFragment)
+            view.findNavController().navigate(R.id.action_loginFragment_to_noticeFragment)
 
         }
 

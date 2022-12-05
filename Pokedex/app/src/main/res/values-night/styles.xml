@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="button_style" parent="@style/Widget.MaterialComponents.Button">
+        <item name="backgroundTint">?attr/colorSecondary</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="login_title_style" parent="TextAppearance.AppCompat.Display4">
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="menu_logout_btn_style" parent="button_style">
+        <item name="android:backgroundTint">?attr/colorPrimaryVariant</item>
+    </style>
+
+</resources>

@@ -9,81 +9,69 @@
 
     <Button
         android:id="@+id/btnLogOut"
-        style="@style/btn_style"
-        android:layout_width="0dp"
+        style="@style/menu_logout_btn_style"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_btn_logout"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
         app:layout_constraintTop_toBottomOf="@+id/btnCredits" />
 
     <Button
         android:id="@+id/btnCredits"
-        style="@style/btn_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/horizontal_margin"
-        android:layout_marginEnd="@dimen/horizontal_margin"
         android:text="@string/credits_btn_text"
         app:layout_constraintBottom_toTopOf="@+id/btnLogOut"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/btnUserInfo"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/btnUserInfo"
+        app:layout_constraintTop_toBottomOf="@+id/btnUserInfo" />
 
     <Button
         android:id="@+id/btnPokedex"
-        style="@style/btn_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/horizontal_margin"
-        android:layout_marginEnd="@dimen/horizontal_margin"
         android:text="@string/pokedex_title"
         app:layout_constraintBottom_toTopOf="@+id/btnFavourites"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/btnFavourites"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/btnFavourites"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnFavourites"
-        style="@style/btn_style"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/horizontal_margin"
-        android:layout_marginEnd="@dimen/horizontal_margin"
-        android:text="Favourites"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        android:text="@string/btn_favourites_text"
+        app:layout_constraintBottom_toTopOf="@+id/btnUserInfo"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
         app:layout_constraintTop_toBottomOf="@+id/btnPokedex" />
 
     <Button
-        android:id="@+id/button"
-        style="@style/btn_style"
+        android:id="@+id/btnUserInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/horizontal_margin"
-        android:layout_marginEnd="@dimen/horizontal_margin"
         android:text="@string/btn_user_info_text"
         app:layout_constraintBottom_toTopOf="@+id/btnCredits"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/btnFavourites"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/btnFavourites"
         app:layout_constraintTop_toBottomOf="@+id/btnFavourites" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guidelineLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/horizontal_margin" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/guidelineRight"
         android:layout_width="@dimen/horizontal_margin"
         android:layout_height="wrap_content"
         android:orientation="vertical"

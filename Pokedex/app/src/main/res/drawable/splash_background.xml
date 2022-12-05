@@ -2,17 +2,11 @@
 <layer-list
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:opacity="opaque">
-    <item android:drawable="@color/primaryColor"/>
-
-    <item
-        android:width="50dp"
-        android:height="50dp"
-        >
-
-        <bitmap android:src="@drawable/pokeball"/>
-
+    <item android:drawable="?attr/colorPrimaryDark"/>
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/pokedex_icon"/>
     </item>
-
-
 
 </layer-list>

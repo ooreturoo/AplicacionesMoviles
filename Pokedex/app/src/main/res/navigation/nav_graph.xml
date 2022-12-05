@@ -11,8 +11,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_loginFragment_to_menuFragment"
-            app:destination="@id/menuFragment" />
+            android:id="@+id/action_loginFragment_to_noticeFragment"
+            app:destination="@id/noticeFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_menuFragment_to_pokemonFavListFragment"
             app:destination="@id/pokemonFavListFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/creditsFragment"
@@ -52,12 +55,30 @@
         android:label="fragment_pokemon_fav_list"
         tools:layout="@layout/fragment_pokemon_fav_list" >
         <action
-            android:id="@+id/action_pokemonFavListFragment_to_detailPokemonFragment"
-            app:destination="@id/detailPokemonFragment" />
+            android:id="@+id/action_pokemonFavListFragment_to_detailFavPokemonFragment"
+            app:destination="@id/detailFavPokemonFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailPokemonFragment"
         android:name="com.sergio.pokedex.lists.DetailPokemonFragment"
         android:label="fragment_detail_pokemon"
         tools:layout="@layout/fragment_detail_pokemon" />
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.sergio.pokedex.UserInfoFragment"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" />
+    <fragment
+        android:id="@+id/noticeFragment"
+        android:name="com.sergio.pokedex.notice.NoticeFragment"
+        android:label="fragment_notice"
+        tools:layout="@layout/fragment_notice" >
+        <action
+            android:id="@+id/action_noticeFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFavPokemonFragment"
+        android:name="com.sergio.pokedex.lists.DetailFavPokemonFragment"
+        android:label="DetailFavPokemonFragment" />
 </navigation>

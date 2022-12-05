@@ -43,7 +43,7 @@ class PokemonFavListFragment : Fragment() {
 
     private fun onClickElement(pokemon : PokemonItemPokedex){
 
-        findNavController().navigate(R.id.action_pokemonFavListFragment_to_detailPokemonFragment)
+        findNavController().navigate(R.id.action_pokemonFavListFragment_to_detailFavPokemonFragment)
 
     }
 

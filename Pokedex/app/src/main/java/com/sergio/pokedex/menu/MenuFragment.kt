@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.sergio.pokedex.R
 import com.sergio.pokedex.databinding.FragmentMenuBinding
 
@@ -41,6 +42,10 @@ class MenuFragment : Fragment() {
 
             it.findNavController().navigate(R.id.action_menuFragment_to_pokemonFavListFragment)
 
+        }
+        binding.btnUserInfo.setOnClickListener{
+
+            it.findNavController().navigate(R.id.action_menuFragment_to_userInfoFragment)
         }
 
         return binding.root

@@ -7,15 +7,19 @@
     <dimen name="content_horizontal_margin">16dp</dimen>
     <dimen name="content_vertical_margin">16dp</dimen>
     <dimen name="login_image_size">200dp</dimen>
+    <dimen name="default_text_size">30sp</dimen>
 
 
-    <dimen name="details_header_vertical_margin">8dp</dimen>
+    <dimen name="details_min_vertical_margin">8dp</dimen>
     <dimen name="details_pokemon_image_size">200dp</dimen>
     <dimen name="details_vertical_margin">24dp</dimen>
+    <dimen name="details_horizontal_margin">24dp</dimen>
     <dimen name="details_types_margin">4dp</dimen>
     <dimen name="details_caught_image_size">20dp</dimen>
     <dimen name="details_star_size">45dp</dimen>
     <dimen name="details_type_size">40dp</dimen>
+
+    <dimen name="details_pokemon_name_size">40sp</dimen>
 
     <dimen name="pokemon_item_content_horizontal_margin">8dp</dimen>
     <dimen name="pokemon_item_content_vertical_margin">8dp</dimen>
@@ -23,8 +27,10 @@
     <dimen name="pokemon_item_pokemon_size">90dp</dimen>
     <dimen name="pokemon_item_caught_size">30dp</dimen>
     <dimen name="pokemon_item_types_horizontal_margin">4dp</dimen>
-    <dimen name="pokemon_item_type_size">37dp</dimen>
-    <dimen name="pokemon_item_card_vertical_margin">8dp</dimen>
-    <dimen name="pokemon_item_card_horizontal_margin">16dp</dimen>
+    <dimen name="pokemon_item_type_size">30dp</dimen>
+    <dimen name="pokemon_item_pokemon_name_size">35sp</dimen>
+    <dimen name="pokemon_item_card_vertical_margin">4dp</dimen>
+    <dimen name="pokemon_item_card_horizontal_margin">10dp</dimen>
+
 
 </resources>

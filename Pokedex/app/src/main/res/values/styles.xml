@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="btn_style">
-        <item name="android:fontFamily">@font/vt323</item>
-        <item name="android:textSize">42sp</item>
+    <style name="button_style" parent="@style/Widget.MaterialComponents.Button">
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
 
-    <style name="text_style">
-        <item name="android:fontFamily">@font/vt323</item>
-        <item name="android:textSize">34sp</item>
+    <style name="textView_style" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
-    <style name="attributes_style">
-        <item name="android:fontFamily">@font/vt323</item>
-        <item name="android:textSize">30sp</item>
-        <item name="android:textColor">@color/primaryTextColor</item>
+    <style name="editText_style" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="menu_logout_btn_style" parent="button_style">
+        <item name="android:backgroundTint">?attr/colorSecondary</item>
+    </style>
+
+    <style name="login_title_style" parent="TextAppearance.AppCompat.Display4">
+        <item name="android:textColor">?attr/colorPrimary</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="tabLayout_appearance" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/tabs_text_size</item>
+    </style>
+
+    <style name="tabs_text_size" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+<!--    <style name="ActionBarStyle" parent="Widget.MaterialComponents.ActionBar.Solid">-->
+<!--        <item name="background">?attr/colorPrimaryVariant</item>-->
+<!--        <item name="titleTextStyle">@style/ActionBarTitleStyle</item>-->
+<!--    </style>-->
+
+<!--    <style name="ActionBarTitleStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">-->
+<!--        <item name="android:textSize">30sp</item>-->
+<!--    </style>-->
+
+
 </resources>

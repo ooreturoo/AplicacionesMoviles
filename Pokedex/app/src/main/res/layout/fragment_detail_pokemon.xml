@@ -5,35 +5,10 @@
     android:id="@+id/constraintRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryLightColor"
+    android:background="@drawable/background_pokemon_details"
+    android:theme="@style/PokedexDetails"
     tools:context=".lists.DetailPokemonFragment">
 
-
-    <TextView
-        android:id="@+id/tvDetWeight"
-        style="@style/attributes_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/details_vertical_margin"
-        android:layout_marginEnd="@dimen/horizontal_margin"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvDetHeight"
-        app:layout_constraintTop_toBottomOf="@+id/rootTypesImages"
-        tools:text="Peso: 5" />
-
-    <ImageView
-        android:id="@+id/ivDetPokemon"
-        android:layout_width="@dimen/details_pokemon_image_size"
-        android:layout_height="@dimen/details_pokemon_image_size"
-        android:layout_marginTop="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:background="@drawable/border_image"
-        tools:srcCompat="@drawable/charmander" />
 
     <ImageView
         android:id="@+id/ivDetFav"
@@ -43,35 +18,54 @@
         android:layout_marginEnd="@dimen/horizontal_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_full_star" />
+        app:srcCompat="@drawable/ic_full_star" />
+
+    <ImageView
+        android:id="@+id/ivDetPokemon"
+        android:layout_width="@dimen/details_pokemon_image_size"
+        android:layout_height="@dimen/details_pokemon_image_size"
+        android:background="@drawable/border_image"
+        app:layout_constraintBottom_toTopOf="@+id/tvDetPokemonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDetFav"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@drawable/charmander" />
 
     <ImageView
         android:id="@+id/ivDetCaught"
         android:layout_width="@dimen/details_caught_image_size"
         android:layout_height="@dimen/details_caught_image_size"
         android:layout_marginEnd="@dimen/details_types_margin"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/tvDetPokemonName"
         app:layout_constraintEnd_toStartOf="@+id/tvDetPokemonName"
         app:layout_constraintTop_toTopOf="@+id/tvDetPokemonName"
-        tools:srcCompat="@drawable/pixel_pokeball" />
+        app:layout_constraintVertical_bias="0.7"
+        app:srcCompat="@drawable/pixel_pokeball" />
 
     <TextView
         android:id="@+id/tvDetPokemonName"
-        style="@style/attributes_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/details_header_vertical_margin"
+        android:layout_marginTop="@dimen/details_min_vertical_margin"
+        android:textSize="@dimen/details_pokemon_name_size"
+        app:layout_constraintBottom_toTopOf="@+id/tvDetPokedexNum"
         app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
         app:layout_constraintTop_toBottomOf="@+id/ivDetPokemon"
         tools:text="Charmander" />
 
     <TextView
         android:id="@+id/tvDetPokedexNum"
-        style="@style/attributes_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/rootTypesImages"
         app:layout_constraintEnd_toEndOf="@+id/tvDetPokemonName"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/tvDetPokemonName"
         app:layout_constraintTop_toBottomOf="@+id/tvDetPokemonName"
         tools:text="Nº003" />
@@ -80,9 +74,11 @@
         android:id="@+id/rootTypesImages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/details_header_vertical_margin"
+        android:layout_marginTop="@dimen/details_min_vertical_margin"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tvDetHeight"
         app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
         app:layout_constraintTop_toBottomOf="@+id/tvDetPokedexNum">
 
@@ -92,6 +88,7 @@
             android:layout_height="@dimen/details_type_size"
             android:layout_marginEnd="@dimen/details_types_margin"
             android:layout_weight="1"
+            android:visibility="visible"
             tools:srcCompat="@drawable/icon_fire_type" />
 
         <ImageView
@@ -100,81 +97,103 @@
             android:layout_height="@dimen/details_type_size"
             android:layout_marginStart="@dimen/details_types_margin"
             android:layout_weight="1"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:srcCompat="@drawable/icon_fire_type" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/tvDetHeight"
-        style="@style/attributes_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/horizontal_margin"
-        android:layout_marginTop="@dimen/details_vertical_margin"
-        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDetWeight"
         app:layout_constraintEnd_toStartOf="@+id/tvDetWeight"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rootTypesImages"
+        app:layout_constraintTop_toTopOf="@+id/tvDetWeight"
         tools:text="Altura: 5" />
 
     <TextView
-        android:id="@+id/textView7"
-        style="@style/attributes_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/details_vertical_margin"
-        app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
-        app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
-        app:layout_constraintTop_toBottomOf="@+id/tvDetHeight"
-        tools:text="Popabilidad captura : 50%" />
-
-    <TextView
-        android:id="@+id/tvDetEvolutionFrom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/horizontal_margin"
-        android:layout_marginBottom="@dimen/vertical_margin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvDetEvolutionTo"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEvolutions"
-        tools:text="Evoluciona de Charmander" />
-
-    <TextView
-        android:id="@+id/tvDetEvolutionTo"
+        android:id="@+id/tvDetWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/horizontal_margin"
-        android:layout_marginBottom="@dimen/vertical_margin"
+        app:layout_constraintBottom_toTopOf="@+id/tvDetCatchProbability"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvDetHeight"
+        app:layout_constraintTop_toBottomOf="@+id/rootTypesImages"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:text="Peso: 5" />
+
+    <TextView
+        android:id="@+id/tvDetCatchProbability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/details_min_vertical_margin"
+        app:layout_constraintBottom_toTopOf="@+id/evolutionsLayout"
+        app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetWeight"
+        tools:text="Popabilidad captura : 50%" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/evolutionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvDetEvolutionFrom"
-        app:layout_constraintTop_toBottomOf="@+id/tvEvolutions"
-        app:layout_constraintVertical_bias="0.5"
-        tools:text="Evoluciona a Charmilion" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/tvEvolutions"
-        style="@style/attributes_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/details_vertical_margin"
-        android:text="@string/details_evolutions_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toTopOf="@+id/tvEvolutions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="@dimen/details_vertical_margin"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        <TextView
+            android:id="@+id/tvEvolutions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/details_min_vertical_margin"
+            android:text="@string/details_evolutions_text"
+            app:layout_constraintBottom_toTopOf="@+id/tvDetEvolutionTo"
+            app:layout_constraintEnd_toEndOf="@+id/tvDetEvolutionTo"
+            app:layout_constraintStart_toStartOf="@+id/tvDetEvolutionFrom"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/tvDetEvolutionFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDetEvolutionTo"
+            app:layout_constraintEnd_toStartOf="@+id/tvDetEvolutionTo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvDetEvolutionTo"
+            tools:text="Evoluciona de " />
+
+        <TextView
+            android:id="@+id/tvDetEvolutionTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvDetEvolutionFrom"
+            app:layout_constraintTop_toBottomOf="@+id/tvEvolutions"
+            tools:text="Evoluciona a " />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
