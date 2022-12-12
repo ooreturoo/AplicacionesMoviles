@@ -7,39 +7,62 @@
     tools:context=".notice.NoticeFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:text="@string/notice"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/noticeGuideLineRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/noticeGuideLineLeft"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabNotice"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/noticeGuideLineRight"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/noticeGuideLineLeft"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vpNotice"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/noticeGuideLineBottom"
+        app:layout_constraintEnd_toStartOf="@+id/noticeGuideLineRight"
+        app:layout_constraintStart_toStartOf="@+id/noticeGuideLineLeft"
         app:layout_constraintTop_toBottomOf="@+id/tabNotice" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/noticeGuideLineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/horizontal_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/noticeGuideLineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/horizontal_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/noticeGuideLineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/vertical_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/vertical_margin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

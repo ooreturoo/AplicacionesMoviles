@@ -6,7 +6,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/pokedex_icon"/>
+            android:src="@drawable/logo_pokedex"/>
     </item>
 
 </layer-list>
