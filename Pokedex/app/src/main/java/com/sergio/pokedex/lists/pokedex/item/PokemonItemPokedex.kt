@@ -10,9 +10,9 @@ data class PokemonItemPokedex(
     val name : String,
     val types : List<String>,
     val caught : Boolean = false,
-    //val height : Int,
-    //val weight : Int,
-    //val catchProbability : Int,
+    val height : Int = 5,
+    val weight : Int = 5,
+    val catchProbability : Int = 50,
     var favourite: Boolean = false
 
 

@@ -33,14 +33,21 @@
         <item name="android:textSize">25sp</item>
     </style>
 
-<!--    <style name="ActionBarStyle" parent="Widget.MaterialComponents.ActionBar.Solid">-->
-<!--        <item name="background">?attr/colorPrimaryVariant</item>-->
-<!--        <item name="titleTextStyle">@style/ActionBarTitleStyle</item>-->
-<!--    </style>-->
+    <style name="bottom_menu" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">?attr/colorPrimaryDark</item>
+        <item name="itemIconTint">@color/navigation_bar_item_tint</item>
+        <item name="itemTextColor">@color/navigation_bar_item_tint</item>
 
-<!--    <style name="ActionBarTitleStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">-->
-<!--        <item name="android:textSize">30sp</item>-->
-<!--    </style>-->
+    </style>
+
+    <style name="action_bar_style" parent="Widget.MaterialComponents.ActionBar.Solid">
+        <item name="background">?attr/colorPrimaryVariant</item>
+        <item name="titleTextStyle">@style/action_bar_title_style.</item>
+    </style>
+
+    <style name="action_bar_title_style." parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">30sp</item>
+    </style>
 
 
 </resources>

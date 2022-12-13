@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.sergio.pokedex.login.LoginFragment"
-        android:label="fragment_login"
+        android:label="@string/title_login_fragment"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_noticeFragment"
@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.sergio.pokedex.menu.MenuFragment"
-        android:label="fragment_menu"
+        android:label="@string/btn_menu_text"
         tools:layout="@layout/fragment_menu" >
         <action
             android:id="@+id/action_menuFragment_to_creditsFragment"
@@ -38,12 +38,12 @@
     <fragment
         android:id="@+id/creditsFragment"
         android:name="com.sergio.pokedex.credits.CreditsFragment"
-        android:label="fragment_credits"
+        android:label="@string/title_credits_fragment"
         tools:layout="@layout/fragment_credits" />
     <fragment
         android:id="@+id/pokemonListFragment"
         android:name="com.sergio.pokedex.lists.pokedex.PokemonListFragment"
-        android:label="fragment_pokemon_list"
+        android:label="@string/title_pokedex_fragment"
         tools:layout="@layout/fragment_pokemon_list" >
         <action
             android:id="@+id/action_pokemonListFragment_to_detailPokemonFragment"
@@ -52,7 +52,7 @@
     <fragment
         android:id="@+id/pokemonFavListFragment"
         android:name="com.sergio.pokedex.lists.pokedex.PokemonFavListFragment"
-        android:label="fragment_pokemon_fav_list"
+        android:label="@string/title_favourites_fragment"
         tools:layout="@layout/fragment_pokemon_fav_list" >
         <action
             android:id="@+id/action_pokemonFavListFragment_to_detailFavPokemonFragment"
@@ -61,17 +61,21 @@
     <fragment
         android:id="@+id/detailPokemonFragment"
         android:name="com.sergio.pokedex.lists.DetailPokemonFragment"
-        android:label="fragment_detail_pokemon"
-        tools:layout="@layout/fragment_detail_pokemon" />
+        android:label="@string/title_detail_pokemon_fragment"
+        tools:layout="@layout/fragment_detail_pokemon" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/userInfoFragment"
         android:name="com.sergio.pokedex.UserInfoFragment"
-        android:label="fragment_user_info"
+        android:label="@string/title_user_info_fragment"
         tools:layout="@layout/fragment_user_info" />
     <fragment
         android:id="@+id/noticeFragment"
         android:name="com.sergio.pokedex.notice.NoticeFragment"
-        android:label="fragment_notice"
+        android:label="@string/notice"
         tools:layout="@layout/fragment_notice" >
         <action
             android:id="@+id/action_noticeFragment_to_menuFragment"
@@ -80,5 +84,9 @@
     <fragment
         android:id="@+id/detailFavPokemonFragment"
         android:name="com.sergio.pokedex.lists.DetailFavPokemonFragment"
-        android:label="DetailFavPokemonFragment" />
+        android:label="@string/title_detail_fav_pokemon_fragment" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
 </navigation>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sergio.pokedex.R
@@ -24,7 +25,7 @@ class PokemonFavListFragment : Fragment() {
     ): View? {
 
         binding = FragmentPokemonFavListBinding.inflate(inflater,container,false)
-        adapter = PokemonFavListAdapter(PokemonProvider.pokemonFavList, onClickStar = {pos -> onClickStar(pos)}, onClickElement = {pokemon -> onClickElement(pokemon)})
+        adapter = PokemonFavListAdapter(PokemonProvider.pokemonFavList, onClickStar = {pos -> onClickStar(pos)}, onClickElement = {pos -> onClickElement(pos)})
         binding.recyclerFavPokedex.adapter = adapter
         binding.recyclerFavPokedex.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         return binding.root
@@ -41,9 +42,10 @@ class PokemonFavListFragment : Fragment() {
 
     }
 
-    private fun onClickElement(pokemon : PokemonItemPokedex){
+    private fun onClickElement(pos : Int ){
 
-        findNavController().navigate(R.id.action_pokemonFavListFragment_to_detailFavPokemonFragment)
+        val action = PokemonFavListFragmentDirections.actionPokemonFavListFragmentToDetailFavPokemonFragment(pos)
+        findNavController().navigate(action)
 
     }
 

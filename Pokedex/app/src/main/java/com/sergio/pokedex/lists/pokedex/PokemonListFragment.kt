@@ -1,11 +1,12 @@
 package com.sergio.pokedex.lists.pokedex
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sergio.pokedex.R
 import com.sergio.pokedex.databinding.FragmentDetailPokemonBinding
@@ -25,13 +26,15 @@ class PokemonListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPokemonListBinding.inflate(inflater, container,false)
-        adapter = PokemonListAdapter(PokemonProvider.pokemonList, onClickStar = { pos -> onClickStar(pos)}, onClickElement = {pokemon -> onClickElement(pokemon)})
+        adapter = PokemonListAdapter(PokemonProvider.pokemonList, onClickStar = { pos -> onClickStar(pos)}, onClickElement = {pos -> onClickElement(pos)})
         binding.recyclerPokedex.adapter = adapter
         binding.recyclerPokedex.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
         return binding.root
 
     }
+
+
 
     private fun onClickStar(pos : Int){
 
@@ -51,11 +54,10 @@ class PokemonListFragment : Fragment() {
 
     }
 
-    private fun onClickElement(pokemon : PokemonItemPokedex){
-        findNavController().navigate(R.id.action_pokemonListFragment_to_detailPokemonFragment)
-
+    private fun onClickElement(pos : Int){
+        val action = PokemonListFragmentDirections.actionPokemonListFragmentToDetailPokemonFragment(pos)
+        findNavController().navigate(action)
     }
-
 
 
 }

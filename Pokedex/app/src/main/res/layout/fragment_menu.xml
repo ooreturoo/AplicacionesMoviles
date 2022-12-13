@@ -12,18 +12,18 @@
         style="@style/menu_logout_btn_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/menu_btn_logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        android:text="@string/btn_logout"
+        app:layout_constraintBottom_toTopOf="@+id/menuGuideLineBottom"
+        app:layout_constraintEnd_toStartOf="@+id/menuGuideLineRight"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/menuGuideLineLeft"
         app:layout_constraintTop_toBottomOf="@+id/btnCredits" />
 
     <Button
         android:id="@+id/btnCredits"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/credits_btn_text"
+        android:text="@string/title_credits_fragment"
         app:layout_constraintBottom_toTopOf="@+id/btnLogOut"
         app:layout_constraintEnd_toEndOf="@+id/btnUserInfo"
         app:layout_constraintHorizontal_bias="0.5"
@@ -34,46 +34,59 @@
         android:id="@+id/btnPokedex"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/pokedex_title"
+        android:text="@string/title_pokedex_fragment"
         app:layout_constraintBottom_toTopOf="@+id/btnFavourites"
         app:layout_constraintEnd_toEndOf="@+id/btnFavourites"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/btnFavourites"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/menuGuideLineTop" />
 
     <Button
         android:id="@+id/btnFavourites"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_favourites_text"
+        android:text="@string/title_favourites_fragment"
         app:layout_constraintBottom_toTopOf="@+id/btnUserInfo"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintEnd_toStartOf="@+id/menuGuideLineRight"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintStart_toStartOf="@+id/menuGuideLineLeft"
         app:layout_constraintTop_toBottomOf="@+id/btnPokedex" />
 
     <Button
         android:id="@+id/btnUserInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/btn_user_info_text"
+        android:text="@string/title_user_info_fragment"
         app:layout_constraintBottom_toTopOf="@+id/btnCredits"
         app:layout_constraintEnd_toEndOf="@+id/btnFavourites"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnFavourites"
         app:layout_constraintTop_toBottomOf="@+id/btnFavourites" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineLeft"
+        android:id="@+id/menuGuideLineLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/horizontal_margin" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineRight"
+        android:id="@+id/menuGuideLineRight"
         android:layout_width="@dimen/horizontal_margin"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/horizontal_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/menuGuideLineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/vertical_margin"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/menuGuideLineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/vertical_margin"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

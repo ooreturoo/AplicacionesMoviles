@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/pokemonListFragment"
+        android:icon="@drawable/ic_menu_pokedex"
+        android:title="@string/title_pokedex_fragment" />
+    <item
+        android:id="@+id/pokemonFavListFragment"
+        android:icon="@drawable/ic_menu_favourite"
+        android:title="@string/title_favourites_fragment" />
+
+    <item
+        android:id="@+id/userInfoFragment"
+        android:icon="@drawable/ic_menu_user"
+        android:title="@string/title_user_info_fragment" />
+
+</menu>

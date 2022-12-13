@@ -7,7 +7,7 @@ import com.sergio.pokedex.lists.pokedex.item.PokemonItemPokedex
 class PokemonListAdapter(
     private val pokemonList : List<PokemonItemPokedex>,
     private val onClickStar : (Int) -> Unit,
-    private val onClickElement : (PokemonItemPokedex) -> Unit
+    private val onClickElement : (Int) -> Unit
     ) : ListAdapter() {
 
     override fun onBindViewHolder(holder: PokemonListHolder, position: Int) {

@@ -20,7 +20,7 @@ class PokemonListHolder(view : View) : RecyclerView.ViewHolder(view)  {
 
 
 
-    fun bind(pokemon : PokemonItemPokedex, onClickStar : (Int) -> Unit, onClickElement : (PokemonItemPokedex) -> Unit,){
+    fun bind(pokemon : PokemonItemPokedex, onClickStar : (Int) -> Unit, onClickElement : (Int) -> Unit){
 
         tvPokedexPokemonNum.text = tvPokedexPokemonNum.resources.getString(R.string.pokedex_number_text,pokemon.pokedexIndex)
         tvPokemonName.text = pokemon.name
@@ -42,7 +42,7 @@ class PokemonListHolder(view : View) : RecyclerView.ViewHolder(view)  {
 
         binding.root.setOnClickListener{
 
-            onClickElement(pokemon)
+            onClickElement(bindingAdapterPosition)
 
         }
 
