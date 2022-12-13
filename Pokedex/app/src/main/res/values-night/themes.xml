@@ -11,7 +11,7 @@
         <item name="colorSecondaryVariant">@color/secondaryColor</item>
         <item name="colorOnSecondary">@color/secondaryTextColor</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?android:attr/colorBackground</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryDark</item>
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/vt323</item>
         <item name="android:textSize">@dimen/default_text_size</item>
@@ -20,7 +20,7 @@
         <item name="editTextStyle">@style/editText_style</item>
         <item name="tabStyle">@style/tabLayout_appearance</item>
         <item name="bottomNavigationStyle">@style/bottom_menu</item>
-<!--        <item name="actionBarStyle">@style/ActionBarStyle</item>-->
+        <item name="actionBarStyle">@style/action_bar_style</item>
     </style>
 
     <style name="PokedexDetails" parent="Theme.AppCompat.DayNight">

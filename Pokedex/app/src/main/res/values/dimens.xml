@@ -11,7 +11,7 @@
 
 
     <dimen name="details_min_vertical_margin">8dp</dimen>
-    <dimen name="details_pokemon_image_size">200dp</dimen>
+    <dimen name="details_pokemon_image_size">170dp</dimen>
     <dimen name="details_vertical_margin">24dp</dimen>
     <dimen name="details_horizontal_margin">24dp</dimen>
     <dimen name="details_types_margin">4dp</dimen>

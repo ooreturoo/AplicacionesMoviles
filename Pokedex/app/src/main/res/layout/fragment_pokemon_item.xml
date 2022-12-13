@@ -14,7 +14,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintRoot"
+        android:id="@+id/detailsConstraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_pokemon_item"

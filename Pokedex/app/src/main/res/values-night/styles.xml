@@ -16,4 +16,16 @@
         <item name="android:backgroundTint">?attr/colorPrimaryVariant</item>
     </style>
 
+    <style name="bottom_menu" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@drawable/background_bottom_menu</item>
+        <item name="itemIconTint">@color/navigation_bar_item_tint</item>
+        <item name="itemTextColor">@color/navigation_bar_item_tint</item>
+
+    </style>
+
+    <style name="action_bar_style" parent="Widget.MaterialComponents.ActionBar.Solid">
+        <item name="background">?attr/colorPrimaryDark</item>
+        <item name="titleTextStyle">@style/action_bar_title_style.</item>
+    </style>
+
 </resources>

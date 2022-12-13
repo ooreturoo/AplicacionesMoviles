@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="credits_description">Dentro de POKEDEX puedes encontrar toda la infromación de los pokemons, como su tipo, su peso, su altura, su probabilidad de captura, etc...</string>
+    <string name="btn_contact">Contacto</string>
+    <string name="user_info_text">Usuario: %s</string>
+    <string name="toast_empty_user_text">El usuario está vacío</string>
+    <string name="mail_content">Mensaje de %s</string>
+    <string name="mail_subject">Aplicacioón %s</string>
+    <string name="pokedex_number_text">Nº%03d</string>
+    <string name="detail_weight_text">Peso: %d</string>
+    <string name="detail_height_text">Altura: %d</string>
+    <string name="detail_catch_probability">Probabilidad de captura:  %d%%</string>
+    <string name="details_evolutions_text">Evoluciones</string>
+    <string name="btn_menu_text">Menú</string>
+    <string name="btn_logout">Cerrar sesión</string>
+    <string name="notice">Noticia</string>
+    <string name="title_login_fragment">Iniciar sesión</string>
+    <string name="title_pokedex_fragment">Pokedex</string>
+    <string name="title_user_info_fragment">Información de usuario</string>
+    <string name="title_favourites_fragment">Favoritos</string>
+    <string name="title_credits_fragment">Creditos</string>
+    <string name="title_detail_pokemon_fragment">Detalles del Pokemon</string>
+    <string name="title_detail_fav_pokemon_fragment">Detalles del Pokemon en Favorito</string>
+    <string name="tv_user_greeting">%s estás usando la version 1 de POKEDEX</string>
+    <string name="et_hint_user">Usuario</string>
+</resources>
