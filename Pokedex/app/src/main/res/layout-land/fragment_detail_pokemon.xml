@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/detailsConstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/background_pokemon_details"
         android:theme="@style/PokedexDetails"
         tools:context=".lists.DetailPokemonFragment">
@@ -27,7 +27,6 @@
             app:layout_constraintBottom_toTopOf="@+id/rootTypesImages"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             app:layout_constraintVertical_chainStyle="packed"
             tools:srcCompat="@drawable/charmander" />
 
@@ -56,11 +55,10 @@
             android:id="@+id/tvDetPokemonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/vertical_margin"
             android:textSize="@dimen/details_pokemon_name_size"
             app:layout_constraintEnd_toStartOf="@+id/ivDetFav"
             app:layout_constraintStart_toEndOf="@+id/ivDetPokemon"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivDetPokemon"
             tools:text="Charmander" />
 
         <TextView
@@ -106,7 +104,7 @@
             android:id="@+id/tvDetCatchProbability"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/evolutionsLayout"
+            app:layout_constraintBottom_toBottomOf="@+id/rootTypesImages"
             app:layout_constraintEnd_toEndOf="@+id/tvDetPokemonName"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/ivDetCaught"
@@ -142,7 +140,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <View
                 android:id="@+id/divider"

@@ -1,7 +1,5 @@
 package com.sergio.pokedex.lists.pokedex.item
 
-import android.graphics.drawable.Drawable
-
 
 data class PokemonItemPokedex(
 

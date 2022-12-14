@@ -20,12 +20,27 @@
             android:id="@+id/floatingActionBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginEnd="@dimen/horizontal_margin"
             android:layout_marginBottom="@dimen/vertical_margin"
             android:clickable="true"
             android:src="@android:drawable/ic_input_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivDetPokemon"
+            android:layout_width="@dimen/details_pokemon_image_size"
+            android:layout_height="@dimen/details_pokemon_image_size"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:background="@drawable/border_image"
+            app:layout_constraintBottom_toTopOf="@+id/rootTypesImages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:srcCompat="@drawable/charmander" />
 
         <ImageView
             android:id="@+id/ivDetFav"
@@ -38,24 +53,9 @@
             app:srcCompat="@drawable/ic_full_star" />
 
         <ImageView
-            android:id="@+id/ivDetPokemon"
-            android:layout_width="@dimen/details_pokemon_image_size"
-            android:layout_height="@dimen/details_pokemon_image_size"
-            android:background="@drawable/border_image"
-            app:layout_constraintBottom_toTopOf="@+id/tvDetPokemonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivDetFav"
-            app:layout_constraintVertical_chainStyle="packed"
-            tools:ignore="ImageContrastCheck"
-            tools:srcCompat="@drawable/charmander" />
-
-        <ImageView
             android:id="@+id/ivDetCaught"
             android:layout_width="@dimen/details_caught_image_size"
             android:layout_height="@dimen/details_caught_image_size"
-            android:layout_marginEnd="@dimen/details_types_margin"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/tvDetPokemonName"
             app:layout_constraintEnd_toStartOf="@+id/tvDetPokemonName"
@@ -67,37 +67,31 @@
             android:id="@+id/tvDetPokemonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/details_min_vertical_margin"
             android:textSize="@dimen/details_pokemon_name_size"
-            app:layout_constraintBottom_toTopOf="@+id/tvDetPokedexNum"
-            app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
-            app:layout_constraintTop_toBottomOf="@+id/ivDetPokemon"
+            app:layout_constraintEnd_toStartOf="@+id/ivDetFav"
+            app:layout_constraintStart_toEndOf="@+id/ivDetPokemon"
+            app:layout_constraintTop_toTopOf="@+id/ivDetPokemon"
             tools:text="Charmander" />
 
         <TextView
             android:id="@+id/tvDetPokedexNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/rootTypesImages"
-            app:layout_constraintEnd_toEndOf="@+id/tvDetPokemonName"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/tvDetPokemonName"
-            app:layout_constraintTop_toBottomOf="@+id/tvDetPokemonName"
+            app:layout_constraintStart_toEndOf="@+id/ivDetPokemon"
+            app:layout_constraintTop_toTopOf="@+id/ivDetPokemon"
             tools:text="Nº003" />
 
         <LinearLayout
             android:id="@+id/rootTypesImages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/details_min_vertical_margin"
+            android:layout_marginBottom="@dimen/details_vertical_margin"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/tvDetHeight"
+            app:layout_constraintBottom_toTopOf="@+id/tvUserComment"
             app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
-            app:layout_constraintTop_toBottomOf="@+id/tvDetPokedexNum">
+            app:layout_constraintTop_toBottomOf="@+id/ivDetPokemon">
 
             <ImageView
                 android:id="@+id/ivDetType1"
@@ -119,54 +113,51 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tvDetHeight"
+            android:id="@+id/tvDetCatchProbability"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/horizontal_margin"
-            app:layout_constraintBottom_toBottomOf="@+id/tvDetWeight"
-            app:layout_constraintEnd_toStartOf="@+id/tvDetWeight"
+            app:layout_constraintBottom_toBottomOf="@+id/rootTypesImages"
+            app:layout_constraintEnd_toEndOf="@+id/tvDetPokemonName"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvDetWeight"
-            tools:text="Altura: 5" />
+            app:layout_constraintStart_toStartOf="@+id/ivDetCaught"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetWeight"
+            tools:text="Popabilidad captura : 50%" />
 
         <TextView
             android:id="@+id/tvDetWeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/tvDetCatchProbability"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvDetCatchProbability"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tvDetHeight"
-            app:layout_constraintTop_toBottomOf="@+id/rootTypesImages"
-            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetPokemonName"
             tools:text="Peso: 5" />
 
         <TextView
-            android:id="@+id/tvDetCatchProbability"
+            android:id="@+id/tvDetHeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/details_vertical_margin"
-            app:layout_constraintBottom_toTopOf="@+id/tvUserComment"
-            app:layout_constraintEnd_toEndOf="@+id/ivDetPokemon"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDetWeight"
+            app:layout_constraintEnd_toStartOf="@+id/tvDetWeight"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/ivDetPokemon"
-            app:layout_constraintTop_toBottomOf="@+id/tvDetWeight"
-            tools:text="Popabilidad captura : 50%" />
+            app:layout_constraintStart_toStartOf="@+id/tvDetCatchProbability"
+            app:layout_constraintTop_toTopOf="@+id/tvDetWeight"
+            tools:text="Altura: 5" />
 
         <TextView
             android:id="@+id/tvUserComment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/horizontal_margin"
-            android:layout_marginEnd="@dimen/content_horizontal_margin"
+            android:layout_marginEnd="@dimen/horizontal_margin"
             android:layout_marginBottom="@dimen/details_vertical_margin"
             android:background="@drawable/background_user_comment"
             android:padding="10dp"
             app:layout_constraintBottom_toTopOf="@+id/floatingActionBtn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="--Example comment added by User--" />
 

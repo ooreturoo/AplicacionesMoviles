@@ -1,6 +1,7 @@
 package com.sergio.pokedex.lists.pokedex
 
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.sergio.pokedex.R
 import com.sergio.pokedex.databinding.FragmentPokemonItemBinding

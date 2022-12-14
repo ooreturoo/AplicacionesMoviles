@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -37,6 +38,8 @@ class PokemonFavListFragment : Fragment() {
         val pokemon = PokemonProvider.pokemonFavList[pos]
 
         PokemonProvider.pokemonFavList.remove(pokemon)
+
+        Toast.makeText(context,"Pokemon is now not favourite",Toast.LENGTH_SHORT).show()
 
         adapter.notifyItemRemoved(pos)
 

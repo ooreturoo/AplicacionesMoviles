@@ -1,6 +1,5 @@
 package com.sergio.pokedex.lists.pokedex.provider
 
-import android.view.View
 import com.sergio.pokedex.R
 import com.sergio.pokedex.lists.pokedex.item.PokemonItemPokedex
 
