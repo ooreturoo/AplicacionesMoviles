@@ -3,12 +3,19 @@
 
     <style name="title_hero_text">
         <item name="android:fontFamily">@font/marvel_bold</item>
-        <item name="android:textColor">#D32020</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/red_text</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="important_text">
-        <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold|italic</item>
+        <item name="android:fontFamily">@font/marvel</item>
+        <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="negrita">
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

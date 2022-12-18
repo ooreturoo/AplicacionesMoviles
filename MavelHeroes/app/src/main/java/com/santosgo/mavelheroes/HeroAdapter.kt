@@ -7,56 +7,58 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.santosgo.mavelheroes.data.Hero
 import com.santosgo.mavelheroes.databinding.HeroItemBinding
-import java.security.PrivateKey
 
+//Clase que implementa el adaptador (Adapter), por lo que debe implementar los métodos.
 class HeroAdapter(
-    private var heroList : MutableList<Hero>,
-    private val onClickDelete : (Int) -> Unit,
-    private val onClickClon : (Int) -> Unit
-    ) : RecyclerView.Adapter<HeroAdapter.HeroViewHolder>() {
+    private val heroList : MutableList<Hero>,
+    private val onClickDelete: (Int) -> Unit,
+    private val onClickImage: (Int, Hero) -> Unit
+) : RecyclerView.Adapter<HeroAdapter.HeroViewHolder>() {
 
-    companion object{
-
+    companion object {
         const val DRAWABLE = "drawable"
-
+        const val CLON = "Clon"
     }
 
-    class HeroViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
+    class HeroViewHolder(view : View) : RecyclerView.ViewHolder(view) {
 
-        private val binding = HeroItemBinding.bind(itemView)
+        private val binding = HeroItemBinding.bind(view)
 
-        fun bind(hero : Hero,
-                 onClickDelete: (Int) -> Unit,
-                 onClickClon : (Int) -> Unit
-        ){
-
-            val context = binding.ivPhoto.context
-
+        //función para enlazar datos de cada elemento con su interfaz. Aquí se incluyen los listeners.
+        fun bind(
+            hero: Hero,
+            onClickDelete: (Int) -> Unit,
+            onClickImage: (Int, Hero) -> Unit
+        ) {
             binding.tvName.text = hero.name
-            binding.tvPower.text = hero.power.toString()
             binding.tvIntelligence.text = hero.intelligence.toString()
+            binding.tvPower.text = hero.power.toString()
+            //tomar fotos de drawable...
+            val context = binding.ivPhoto.context
+            val idPhoto = context.resources.getIdentifier(hero.photo, DRAWABLE,context.packageName)
+            binding.ivPhoto.setImageResource(idPhoto)
 
-            binding.ivDelHero.setOnClickListener{
 
+            binding.root.setOnClickListener {
+                Snackbar.make(it,context.getString(R.string.convocate_hero,hero.name),Snackbar.LENGTH_SHORT).show()
+            }
+
+            //borrado de un elemento de la lista con función lambda.
+            binding.ivDelHero.setOnClickListener {
                 onClickDelete(adapterPosition)
-
-            }
-            binding.ivPhoto.setOnClickListener{
-
-                onClickClon(adapterPosition)
-
             }
 
-            val idRes = context.resources.getIdentifier(hero.photo, DRAWABLE, context.packageName)
-            binding.ivPhoto.setImageResource(idRes)
-
-            binding.root.setOnClickListener{
-                Snackbar.make(it,context.getString(R.string.call_hero,hero.name),Snackbar.LENGTH_SHORT).show()
+            //Crea un clon de un héroe en una posición después del actual.
+            binding.ivPhoto.setOnClickListener {
+                if(!hero.name.contains(CLON)) {
+                    val clonHero = hero.copy(name = "$CLON ${hero.name}")
+                    onClickImage(adapterPosition+1, clonHero)
+                } else {
+                    Snackbar.make(it,context.getString(R.string.cant_clone), Snackbar.LENGTH_SHORT).show()
+                }
             }
 
         }
-
-
 
     }
 
@@ -67,10 +69,12 @@ class HeroAdapter(
 
     override fun onBindViewHolder(holder: HeroViewHolder, position: Int) {
         val hero = heroList[position]
-        holder.bind(hero,onClickDelete,onClickClon)
+        holder.bind(hero, onClickDelete, onClickImage)
+
     }
 
     override fun getItemCount(): Int {
         return heroList.size
     }
+
 }

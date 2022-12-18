@@ -3,10 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hero_list">Lista de Heroes</string>
-    <string name="hero_image">Imagen heroe</string>
     <string name="Power">Poder</string>
     <string name="intelligence">Inteligencia</string>
-    <string name="call_hero">Has convocado a %s</string>
-    <string name="clon_text">Clon %s</string>
-    <string name="no_clonable_text">No puedes clonar un clon</string>
+    <string name="hero_image">Imagen del superheroe</string>
+    <string name="convocate_hero">Has convocado al héroe: %s.</string>
+    <string name="cant_clone">"No puedes clonar a un clon."</string>
 </resources>
